@@ -2,8 +2,7 @@
 
 ## Trial lists
 
-Which trial lists are in `trial_lists/`: your A2 generator's output, or the
-canonical set from `provided/`? If canonical, say why.
+I used my Assignment 2 trial lists for participants 1–8, generated with seed 8683. I copied them into the `trial_lists/` folder. All eight files were available, so I did not use the provided canonical fallback lists. I verified that participant 3's file contains 8 practice and 96 experimental trials.
 
 ## How the build happened
 
