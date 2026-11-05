@@ -248,8 +248,42 @@ def check_q6(output: Output, lists_dir: str) -> list[tuple[str, str]]:
     return [observed, ("PILOT", "The CSV cannot establish that irrelevant keys are ignored or Escape quits; test in Pilot mode.")]
 
 
-def check_q7(output: Output, lists_dir: str) -> tuple[str, str]:
-    return "PILOT", "RT clock start at the target's first refresh cannot be independently inferred from RT alone; verify simultaneous target/keyboard start and clock reset on flip in Builder/generated script."
+def check_q7(output: Output, lists_dir: str) -> list[tuple[str, str]]:
+    """Compare logged keyboard and target-onset refreshes where both exist.
+
+    This check was added *after* the first-checker commit. An initial
+    blanket PILOT verdict missed the deliberately early keyboard onset
+    in provided file F. Comparing two independently logged component
+    .started columns is a falsifiable output-based test of timing setup.
+    """
+    candidates = [
+        ("targetStim.started", "trialKey.started"),
+        ("target_text.started", "key_resp.started"),
+    ]
+    pair = next(((target, kb) for target, kb in candidates
+                 if output.has(target, kb)), None)
+    if pair is None:
+        return [("PILOT", "No target/keyboard component-start columns in the file; observe target and keyboard onset in Pilot mode or inspect generated script.")]
+
+    target_col, keyboard_col = pair
+    bad = []
+    for i, row in enumerate(output.trials, 1):
+        target = num(output, row, target_col)
+        keyboard = num(output, row, keyboard_col)
+        if target is None or keyboard is None:
+            bad.append(f"trial {i}: target or keyboard start timestamp missing")
+        elif abs(keyboard - target) > 0.010:
+            bad.append(f"trial {i}: keyboard starts {(keyboard-target)*1000:+.1f} ms relative to target")
+
+    if bad:
+        observed = ("FAIL", f"Keyboard onset differs from target onset on {len(bad)}/{len(output.trials)} trials; first {bad[:4]}.")
+    else:
+        observed = ("PASS", f"Keyboard and target start on the same logged refresh on all {len(output.trials)} trials ({keyboard_col} versus {target_col}; <=10 ms tolerance).")
+
+    return [
+        observed,
+        ("PILOT", "Matching component-start timestamps alone cannot prove the keyboard RT clock was reset on that screen flip or that no earlier keystrokes leaked in; inspect generated code and test with intentionally early and late keys."),
+    ]
 
 
 def check_q8(output: Output, lists_dir: str) -> list[tuple[str, str]]:
