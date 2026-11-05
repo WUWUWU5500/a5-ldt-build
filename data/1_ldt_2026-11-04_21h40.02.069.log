@@ -1,0 +1,193 @@
+5.8916 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+5.8924 	INFO 	Loaded monitor calibration from ['2026_09_02 11:41']
+6.0972 	INFO 	Using renderer 'AMD Radeon (TM) Graphics' for graphics
+6.0972 	INFO 	OpenGL version supported by driver is 4..
+6.1448 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002C1D3414910>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002C1D3477F10>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002C1D31AEF80>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.1448 	EXP 	window1: backgroundImage = ''
+6.1448 	EXP 	window1: backgroundFit = 'none'
+6.1647 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.1765 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.1882 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2002 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2120 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2236 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2352 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2472 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2588 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2703 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2820 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.2940 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3057 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3174 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3293 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3411 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3528 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3643 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3759 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3877 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3993 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.3997 	DEBUG 	Uploading Texture Font fontname to graphics card
+6.4018 	DEBUG 	Upload of Texture Font fontname complete
+6.4190 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.4310 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.4429 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+6.4432 	DEBUG 	Uploading Texture Font fontname to graphics card
+6.4443 	DEBUG 	Upload of Texture Font fontname complete
+6.4457 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.4458 	EXP 	window1: recordFrameIntervals = False
+6.6263 	EXP 	window1: recordFrameIntervals = True
+8.2918 	EXP 	window1: recordFrameIntervals = False
+8.2918 	EXP 	Screen (0) actual frame rate measured at 59.92Hz
+8.3087 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3206 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3324 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3444 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3563 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3683 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3798 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.3917 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.4036 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.4155 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.4158 	DEBUG 	Uploading Texture Font fontname to graphics card
+8.4167 	DEBUG 	Upload of Texture Font fontname complete
+8.5453 	INFO 	keyboard.Keyboard is using ptb backend.
+8.5454 	EXP 	ldt: status = STARTED
+8.5578 	EXP 	Created instructionsText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructionsText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.5948 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+8.5955 	EXP 	Created primeStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='primeStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.5960 	EXP 	Created targetStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='targetStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.5966 	EXP 	Created feedbackText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedbackText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.5985 	EXP 	Created blankText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='blankText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=' ', units='height', win=Window(...), wrapWidth=1)
+8.6053 	EXP 	Created breakText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='breakText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.6068 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+8.6074 	EXP 	Created primeStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='primeStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.6079 	EXP 	Created targetStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='targetStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+8.6092 	EXP 	Created blankText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='blankText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=' ', units='height', win=Window(...), wrapWidth=1)
+8.6125 	EXP 	Created endText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='endText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1)
+0.0268 	INFO 	Keyboard events cleared
+0.0267 	EXP 	instructionsText: height = np.float64(0.05)
+0.0267 	EXP 	instructionsText: height = np.float64(0.05)
+0.0267 	EXP 	instructionsText: height = np.float64(0.05)
+0.0267 	EXP 	instructionsText: text = 'Press F for WORD and J for NONWORD.\n\nPress SPACE to begin.'
+0.0267 	EXP 	instructionsText: autoDraw = True
+1.7152 	EXP 	Device response: <KeyPress from None: t=1.7061843001283705, value=space, duration=None>
+1.7210 	DEBUG 	Read csv file with pandas: trial_lists/trials_p01.csv
+1.7217 	DEBUG 	Clearing unnamed columns from trial_lists/trials_p01.csv
+1.7253 	EXP 	Imported trial_lists/trials_p01.csv as conditions, 8 conditions, 10 params
+1.7255 	EXP 	New trial (rep=0, index=0): <Trial 0 (0 in rep 0) data={'participant': np.int64(1), 'phase': 'practice', 'trial_index': np.int64(1), 'item_id': 'PN3', 'target': 'frunt', 'prime': 'pebble', 'relatedness': 'none', 'soa': np.int64(1000), 'correct_response': 'nonword', 'seed': np.int64(8683), 'thisN': 0, 'thisTrialN': 0, 'thisRepN': 0}>
+1.7297 	DATA 	Keypress: space
+1.7427 	EXP 	instructionsText: autoDraw = False
+1.7427 	EXP 	primeStim: height = np.float64(0.05)
+1.7427 	EXP 	primeStim: height = np.float64(0.05)
+1.7427 	EXP 	primeStim: height = np.float64(0.05)
+1.7427 	EXP 	primeStim: text = 'pebble'
+1.7427 	EXP 	targetStim: height = np.float64(0.05)
+1.7427 	EXP 	targetStim: height = np.float64(0.05)
+1.7427 	EXP 	targetStim: height = np.float64(0.05)
+1.7427 	EXP 	targetStim: text = 'FRUNT'
+1.7427 	EXP 	fixation: autoDraw = True
+1.8275 	EXP 	Device response: <KeyPress from None: t=1.7061843001283705, value=space, duration=0.11508869985118508>
+2.2425 	EXP 	fixation: autoDraw = False
+2.2425 	EXP 	primeStim: autoDraw = True
+2.3936 	EXP 	primeStim: autoDraw = False
+2.9778 	EXP 	Device response: <KeyPress from None: t=2.974931300152093, value=j, duration=None>
+2.9781 	DATA 	Keypress: j
+3.0943 	EXP 	Device response: <KeyPress from None: t=2.974931300152093, value=j, duration=0.1088188998401165>
+3.2421 	INFO 	Keyboard events cleared
+3.2421 	EXP 	targetStim: autoDraw = True
+3.5611 	EXP 	Device response: <KeyPress from None: t=3.559160100063309, value=j, duration=None>
+3.5634 	DATA 	Keypress: j
+3.5750 	EXP 	fixation: autoDraw = False
+3.5750 	EXP 	primeStim: autoDraw = False
+3.5750 	EXP 	targetStim: autoDraw = False
+3.5750 	EXP 	feedbackText: height = np.float64(0.05)
+3.5750 	EXP 	feedbackText: height = np.float64(0.05)
+3.5750 	EXP 	feedbackText: height = np.float64(0.05)
+3.5750 	EXP 	feedbackText: text = 'Correct'
+3.5750 	EXP 	feedbackText: autoDraw = True
+3.6940 	EXP 	Device response: <KeyPress from None: t=3.559160100063309, value=j, duration=0.11953329993411899>
+4.0102 	EXP 	Device response: <KeyPress from None: t=4.008602099958807, value=j, duration=None>
+4.0108 	DATA 	Keypress: j
+4.1098 	EXP 	Device response: <KeyPress from None: t=4.008602099958807, value=j, duration=0.08857700019143522>
+4.2273 	EXP 	Device response: <KeyPress from None: t=4.218372900038958, value=j, duration=None>
+4.2277 	DATA 	Keypress: j
+4.3103 	EXP 	Device response: <KeyPress from None: t=4.218372900038958, value=j, duration=0.09074239991605282>
+4.4263 	EXP 	Device response: <KeyPress from None: t=4.417045300127938, value=j, duration=None>
+4.4267 	DATA 	Keypress: j
+4.5268 	EXP 	Device response: <KeyPress from None: t=4.417045300127938, value=j, duration=0.10381819983012974>
+4.5759 	EXP 	feedbackText: autoDraw = False
+4.5759 	EXP 	feedbackText: autoDraw = False
+4.5759 	EXP 	blankText: autoDraw = True
+4.8760 	EXP 	Device response: <KeyPress from None: t=4.870953900041059, value=j, duration=None>
+4.8765 	DATA 	Keypress: j
+5.0093 	EXP 	Device response: <KeyPress from None: t=4.870953900041059, value=j, duration=0.13230399996973574>
+5.0597 	EXP 	New trial (rep=0, index=1): <Trial 1 (1 in rep 0) data={'participant': np.int64(1), 'phase': 'practice', 'trial_index': np.int64(2), 'item_id': 'PN2', 'target': 'blodge', 'prime': 'gravel', 'relatedness': 'none', 'soa': np.int64(150), 'correct_response': 'nonword', 'seed': np.int64(8683), 'thisN': 1, 'thisTrialN': 1, 'thisRepN': 0}>
+5.0741 	EXP 	blankText: autoDraw = False
+5.0741 	EXP 	blankText: autoDraw = False
+5.0741 	EXP 	primeStim: height = np.float64(0.05)
+5.0741 	EXP 	primeStim: height = np.float64(0.05)
+5.0741 	EXP 	primeStim: height = np.float64(0.05)
+5.0741 	EXP 	primeStim: text = 'gravel'
+5.0741 	EXP 	targetStim: height = np.float64(0.05)
+5.0741 	EXP 	targetStim: height = np.float64(0.05)
+5.0741 	EXP 	targetStim: height = np.float64(0.05)
+5.0741 	EXP 	targetStim: text = 'BLODGE'
+5.0741 	EXP 	fixation: autoDraw = True
+5.3601 	EXP 	Device response: <KeyPress from None: t=5.344869400141761, value=j, duration=None>
+5.3605 	DATA 	Keypress: j
+5.4763 	EXP 	Device response: <KeyPress from None: t=5.344869400141761, value=j, duration=0.11787789990194142>
+5.5747 	EXP 	fixation: autoDraw = False
+5.5747 	EXP 	primeStim: autoDraw = True
+5.6433 	EXP 	Device response: <KeyPress from None: t=5.629041500156745, value=j, duration=None>
+5.6438 	DATA 	Keypress: j
+5.7242 	INFO 	Keyboard events cleared
+5.7242 	EXP 	primeStim: autoDraw = False
+5.7242 	EXP 	targetStim: autoDraw = True
+5.7599 	EXP 	Device response: <KeyPress from None: t=5.629041500156745, value=j, duration=0.11704449984245002>
+5.8762 	EXP 	Device response: <KeyPress from None: t=5.86935649998486, value=j, duration=None>
+5.8768 	DATA 	Keypress: j
+5.8905 	EXP 	fixation: autoDraw = False
+5.8905 	EXP 	primeStim: autoDraw = False
+5.8905 	EXP 	targetStim: autoDraw = False
+5.8905 	EXP 	feedbackText: text = 'Correct'
+5.8905 	EXP 	feedbackText: autoDraw = True
+6.0096 	EXP 	Device response: <KeyPress from None: t=5.86935649998486, value=j, duration=0.12896460015326738>
+6.1085 	EXP 	Device response: <KeyPress from None: t=6.1012761001475155, value=j, duration=None>
+6.1089 	DATA 	Keypress: j
+6.2260 	EXP 	Device response: <KeyPress from None: t=6.1012761001475155, value=j, duration=0.11370939994230866>
+6.3258 	EXP 	Device response: <KeyPress from None: t=6.3098321000579745, value=j, duration=None>
+6.3262 	DATA 	Keypress: j
+6.4253 	EXP 	Device response: <KeyPress from None: t=6.3098321000579745, value=j, duration=0.11098490003496408>
+6.5585 	EXP 	Device response: <KeyPress from None: t=6.546738900011405, value=j, duration=None>
+6.5588 	DATA 	Keypress: j
+6.6929 	EXP 	Device response: <KeyPress from None: t=6.546738900011405, value=j, duration=0.13283880008384585>
+6.8922 	EXP 	feedbackText: autoDraw = False
+6.8922 	EXP 	feedbackText: autoDraw = False
+6.8922 	EXP 	blankText: autoDraw = True
+7.3766 	EXP 	New trial (rep=0, index=2): <Trial 2 (2 in rep 0) data={'participant': np.int64(1), 'phase': 'practice', 'trial_index': np.int64(3), 'item_id': 'PW1', 'target': 'velvet', 'prime': 'cloth', 'relatedness': 'related', 'soa': np.int64(150), 'correct_response': 'word', 'seed': np.int64(8683), 'thisN': 2, 'thisTrialN': 2, 'thisRepN': 0}>
+7.3909 	EXP 	blankText: autoDraw = False
+7.3909 	EXP 	blankText: autoDraw = False
+7.3909 	EXP 	primeStim: height = np.float64(0.05)
+7.3909 	EXP 	primeStim: height = np.float64(0.05)
+7.3909 	EXP 	primeStim: height = np.float64(0.05)
+7.3909 	EXP 	primeStim: text = 'cloth'
+7.3909 	EXP 	targetStim: height = np.float64(0.05)
+7.3909 	EXP 	targetStim: height = np.float64(0.05)
+7.3909 	EXP 	targetStim: height = np.float64(0.05)
+7.3909 	EXP 	targetStim: text = 'VELVET'
+7.3909 	EXP 	fixation: autoDraw = True
+7.8912 	EXP 	fixation: autoDraw = False
+7.8912 	EXP 	primeStim: autoDraw = True
+8.0416 	INFO 	Keyboard events cleared
+8.0415 	EXP 	primeStim: autoDraw = False
+8.0415 	EXP 	targetStim: autoDraw = True
+8.8923 	EXP 	Device response: <KeyPress from None: t=8.880579200107604, value=escape, duration=None>
+8.8928 	DATA 	Keypress: escape
+9.1091 	EXP 	Device response: <KeyPress from None: t=8.880579200107604, value=escape, duration=0.2126680000219494>
+9.1091 	EXP 	ldt: status = STOPPED
+9.1224 	EXP 	targetStim: autoDraw = False
+9.1242 	EXP 	ldt: status = STOPPED
+9.1463 	INFO 	saved data to 'C:\\Users\\zhaoc\\Desktop\\a5-ldt-build\\data\\1_ldt_2026-11-04_21h40.02.069.csv'
+9.1472 	INFO 	saved data to C:\Users\zhaoc\Desktop\a5-ldt-build\data\1_ldt_2026-11-04_21h40.02.069.psydat
+9.4434 	DEBUG 	Saving data for ldt ExperimentHandler
+9.4471 	INFO 	Stopping keyboard key buffers.

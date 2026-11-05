@@ -7,7 +7,7 @@
     <Param val="'data/' + expInfo['participant'] + '_' + expName + '_' + expInfo['date']" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="Thank you for your patience." valType="str" updates="None" name="End Message"/>
-    <Param val="{'participant': '&quot;1&quot;', 'session': '001'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'participant': '1', 'session': '001'}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -46,7 +46,7 @@
     <Param val="['MIDDLE_BUTTON']" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
@@ -69,6 +69,23 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
+      <CodeComponent name="trialTimingCode" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Selected SOA comes from the CSV for the current trial.&amp;#10;soaFrames = int(round(float(soa) * ldt_hz / 1000))&amp;#10;if soaFrames &lt; primeFrames:&amp;#10;    raise ValueError(&quot;SOA shorter than prime duration&quot;)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="trialTimingCode" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <TextComponent name="fixation" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
@@ -86,10 +103,10 @@
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="fixFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="+" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -113,10 +130,10 @@
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.5" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.15" valType="code" updates="constant" name="stopVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="fixFrames" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="primeFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$prime" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -140,10 +157,10 @@
         <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="$(0.5 + float(soa)/1000)" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="2" valType="code" updates="constant" name="stopVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="fixFrames + soaFrames" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="targetFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$target.upper()" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -161,14 +178,31 @@
         <Param val="press" valType="str" updates="constant" name="registerOn"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="$(0.5 + float(soa)/1000)" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="2" valType="code" updates="constant" name="stopVal"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="fixFrames + soaFrames" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="targetFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="first key" valType="str" updates="constant" name="store"/>
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
+      <CodeComponent name="trialRecordCode" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# Built-in Builder components have now finished presenting and listening.&amp;#10;# tStartRefresh is on the same experiment clock as the *.started columns.&amp;#10;shown_prime = str(primeStim.text)&amp;#10;shown_target = str(targetStim.text)&amp;#10;pressed = trialKey.keys&amp;#10;if isinstance(pressed, (list, tuple)):&amp;#10;    pressed = pressed[0] if pressed else None&amp;#10;if pressed not in ('f', 'j'):&amp;#10;    pressed = None&amp;#10;raw_rt = trialKey.rt&amp;#10;if isinstance(raw_rt, (list, tuple)):&amp;#10;    raw_rt = raw_rt[0] if raw_rt else None&amp;#10;ldt_timeout = int(pressed is None)&amp;#10;ldt_rt = float(raw_rt) if not ldt_timeout and raw_rt is not None else None&amp;#10;word_key = 'f' if int(expInfo['participant']) % 2 else 'j'&amp;#10;expected_key = word_key if str(correct_response) == 'word' else ('j' if word_key == 'f' else 'f')&amp;#10;ldt_accuracy = int(pressed is not None and pressed == expected_key)&amp;#10;thisExp.addData('prime_shown', shown_prime)&amp;#10;thisExp.addData('target_shown', shown_target)&amp;#10;thisExp.addData('prime_onset', primeStim.tStartRefresh)&amp;#10;thisExp.addData('target_onset', targetStim.tStartRefresh)&amp;#10;thisExp.addData('key', pressed if pressed is not None else '')&amp;#10;thisExp.addData('rt', ldt_rt if ldt_rt is not None else '')&amp;#10;thisExp.addData('accuracy', ldt_accuracy)&amp;#10;thisExp.addData('timeout', ldt_timeout)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="trialRecordCode" valType="code" updates="None" name="name"/>
+      </CodeComponent>
     </Routine>
     <Routine name="instructions">
       <RoutineSettingsComponent name="instructions" plugin="None">
@@ -190,7 +224,7 @@
       <CodeComponent name="instructionCode" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="# Use the refresh rate actually measured by PsychoPy at startup.&amp;#10;_measured_hz = expInfo.get('frameRate')&amp;#10;if _measured_hz is None or float(_measured_hz) &lt;= 0:&amp;#10;    raise RuntimeError(&quot;Q5 requires a measurable, stable screen frame rate.&quot;)&amp;#10;ldt_hz = int(round(float(_measured_hz)))&amp;#10;if ldt_hz &lt;= 0:&amp;#10;    raise RuntimeError(&quot;Invalid measured screen frame rate&quot;)&amp;#10;# Store the rounded rate required by Q5 in the output file.&amp;#10;expInfo['frameRate'] = ldt_hz&amp;#10;fixFrames = int(round(500 * ldt_hz / 1000))&amp;#10;primeFrames = int(round(150 * ldt_hz / 1000))&amp;#10;targetFrames = int(round(2000 * ldt_hz / 1000))&amp;#10;feedbackFrames = int(round(1000 * ldt_hz / 1000))&amp;#10;itiFrames = int(round(500 * ldt_hz / 1000))&amp;#10;endFrames = int(round(2000 * ldt_hz / 1000))" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="if int(expInfo['participant']) % 2 == 1:&amp;#10;    instruction_msg = &quot;Press F for WORD and J for NONWORD.\n\nPress SPACE to begin.&quot;&amp;#10;else:&amp;#10;    instruction_msg = &quot;Press J for WORD and F for NONWORD.\n\nPress SPACE to begin.&quot;" valType="extendedCode" updates="constant" name="Begin Routine"/>
@@ -304,8 +338,8 @@
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="1.0" valType="code" updates="constant" name="stopVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="feedbackFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$feedback_msg" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -349,8 +383,8 @@
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="0.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="itiFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val=" " valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
@@ -458,8 +492,8 @@
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val="2" valType="code" updates="constant" name="stopVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="endFrames" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Thank you for participating!" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
