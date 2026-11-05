@@ -1,0 +1,281 @@
+17.4423 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+17.4431 	INFO 	Loaded monitor calibration from ['2026_09_02 11:41']
+17.8047 	INFO 	Using renderer 'AMD Radeon (TM) Graphics' for graphics
+17.8047 	INFO 	OpenGL version supported by driver is 4..
+18.5381 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D1872A7700>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D1872A7760>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001D186DD96C0>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+18.5382 	EXP 	window1: backgroundImage = ''
+18.5382 	EXP 	window1: backgroundFit = 'none'
+18.5788 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.5907 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6027 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6149 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6270 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6387 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6506 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6626 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6741 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6856 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.6974 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7092 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7209 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7325 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7441 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7559 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7677 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7792 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.7909 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.8028 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.8146 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.8149 	DEBUG 	Uploading Texture Font fontname to graphics card
+18.8164 	DEBUG 	Upload of Texture Font fontname complete
+18.8330 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.8450 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.8569 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+18.8571 	DEBUG 	Uploading Texture Font fontname to graphics card
+18.8581 	DEBUG 	Upload of Texture Font fontname complete
+18.8590 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+18.8590 	EXP 	window1: recordFrameIntervals = False
+18.8942 	DATA 	Mouse: wheel shift=(0,-3), pos=(0,0)
+19.0545 	EXP 	window1: recordFrameIntervals = True
+20.7227 	EXP 	window1: recordFrameIntervals = False
+20.7228 	EXP 	Screen (0) actual frame rate measured at 59.48Hz
+20.7398 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.7515 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.7633 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.7752 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.7870 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.7989 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.8104 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.8221 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.8340 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.8458 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+20.8461 	DEBUG 	Uploading Texture Font fontname to graphics card
+20.8471 	DEBUG 	Upload of Texture Font fontname complete
+20.9835 	INFO 	keyboard.Keyboard is using ptb backend.
+20.9835 	EXP 	ldt: status = STARTED
+20.9989 	EXP 	Created instructionsText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructionsText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0513 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+21.0521 	EXP 	Created primeStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='primeStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0527 	EXP 	Created targetStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='targetStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0533 	EXP 	Created feedbackText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedbackText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0557 	EXP 	Created blankText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='blankText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=' ', units='height', win=Window(...), wrapWidth=1)
+21.0698 	EXP 	Created breakText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='breakText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+21.0711 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+21.0717 	EXP 	Created primeStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='primeStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0723 	EXP 	Created targetStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='targetStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+21.0735 	EXP 	Created blankText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='blankText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=' ', units='height', win=Window(...), wrapWidth=1)
+21.0788 	EXP 	Created endText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='endText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1)
+0.0588 	EXP 	instructionsText: height = np.float64(0.05)
+0.0588 	EXP 	instructionsText: height = np.float64(0.05)
+0.0588 	EXP 	instructionsText: height = np.float64(0.05)
+0.0588 	EXP 	instructionsText: text = 'Press F for WORD and J for NONWORD.\n\nPress SPACE to begin.'
+0.0588 	EXP 	instructionsText: autoDraw = True
+5.5192 	EXP 	Device response: <KeyPress from None: t=4.700283700134605, value=space, duration=None>
+5.5199 	DATA 	Keypress: space
+5.5419 	EXP 	Device response: <KeyPress from None: t=4.700283700134605, value=space, duration=0.11426079994998872>
+6.3588 	EXP 	Device response: <KeyPress from None: t=6.343939700163901, value=space, duration=None>
+6.3593 	DATA 	Keypress: space
+6.5251 	EXP 	Device response: <KeyPress from None: t=6.343939700163901, value=space, duration=0.16710929991677403>
+6.7590 	DATA 	Mouse: Left button down, pos=(462,309)
+6.8416 	DATA 	Mouse:  Left button up, pos=(462,309)
+6.9576 	EXP 	Device response: <KeyPress from None: t=6.9498630000744015, value=space, duration=None>
+6.9580 	DATA 	Keypress: space
+7.1081 	EXP 	Device response: <KeyPress from None: t=6.9498630000744015, value=space, duration=0.15277950000017881>
+7.6237 	EXP 	Device response: <KeyPress from None: t=7.616466500097886, value=space, duration=None>
+7.6242 	DATA 	Keypress: space
+7.7576 	EXP 	Device response: <KeyPress from None: t=7.616466500097886, value=space, duration=0.13714200002141297>
+7.8401 	EXP 	Device response: <KeyPress from None: t=7.829242500010878, value=space, duration=None>
+7.8406 	DATA 	Keypress: space
+7.9578 	EXP 	Device response: <KeyPress from None: t=7.829242500010878, value=space, duration=0.12489089998416603>
+8.0582 	EXP 	Device response: <KeyPress from None: t=8.055024600122124, value=space, duration=None>
+8.0586 	DATA 	Keypress: space
+8.1735 	EXP 	Device response: <KeyPress from None: t=8.055024600122124, value=space, duration=0.11701649986207485>
+8.8422 	DATA 	Mouse: Left button down, pos=(399,28)
+8.9589 	DATA 	Mouse:  Left button up, pos=(399,28)
+8.9896 	EXP 	Device response: <KeyPress from None: t=8.975910800043494, value=space, duration=None>
+8.9899 	DATA 	Keypress: space
+9.1564 	EXP 	Device response: <KeyPress from None: t=8.975910800043494, value=space, duration=0.17236660001799464>
+9.3066 	EXP 	Device response: <KeyPress from None: t=9.303889299975708, value=a, duration=None>
+9.3070 	DATA 	Keypress: a
+9.6235 	EXP 	Device response: <KeyPress from None: t=9.303889299975708, value=a, duration=0.30417090002447367>
+10.0559 	EXP 	Device response: <KeyPress from None: t=10.046096400124952, value=d, duration=None>
+10.0563 	DATA 	Keypress: d
+10.2729 	EXP 	Device response: <KeyPress from None: t=10.268283799989149, value=a, duration=None>
+10.2733 	DATA 	Keypress: a
+10.2889 	EXP 	Device response: <KeyPress from None: t=10.046096400124952, value=d, duration=0.23273749998770654>
+10.4232 	EXP 	Device response: <KeyPress from None: t=10.268283799989149, value=a, duration=0.14711789996363223>
+11.7732 	DATA 	Mouse: Left button down, pos=(413,225)
+11.8725 	DATA 	Mouse:  Left button up, pos=(412,232)
+12.0889 	DATA 	Mouse: Left button down, pos=(400,408)
+12.2718 	DATA 	Mouse:  Left button up, pos=(326,385)
+12.4388 	DATA 	Mouse: Left button down, pos=(368,276)
+12.5717 	DATA 	Mouse:  Left button up, pos=(357,281)
+12.6887 	DATA 	Mouse: Left button down, pos=(342,318)
+12.8052 	DATA 	Mouse:  Left button up, pos=(342,318)
+18.4361 	DATA 	Mouse: Left button down, pos=(395,386)
+18.5351 	DATA 	Mouse:  Left button up, pos=(394,386)
+18.6025 	DATA 	Mouse: Left button down, pos=(394,386)
+18.7022 	DATA 	Mouse:  Left button up, pos=(396,386)
+19.9689 	EXP 	Device response: <KeyPress from None: t=19.964936499949545, value=f, duration=None>
+19.9694 	DATA 	Keypress: f
+20.0670 	EXP 	Device response: <KeyPress from None: t=19.964936499949545, value=f, duration=0.09736670018173754>
+20.1518 	EXP 	Device response: <KeyPress from None: t=20.15018850006163, value=f, duration=None>
+20.1523 	DATA 	Keypress: f
+20.2842 	EXP 	Device response: <KeyPress from None: t=20.15018850006163, value=f, duration=0.12761490000411868>
+21.3173 	DATA 	Keypress: space
+21.3341 	EXP 	Device response: <KeyPress from None: t=21.316927999956533, value=space, duration=None>
+21.4334 	EXP 	Device response: <KeyPress from None: t=21.316927999956533, value=space, duration=0.10183300008065999>
+21.7496 	EXP 	Device response: <KeyPress from None: t=21.743603999959305, value=space, duration=None>
+21.7500 	DATA 	Keypress: space
+21.9832 	EXP 	Device response: <KeyPress from None: t=21.743603999959305, value=space, duration=0.23311310005374253>
+22.1510 	EXP 	Device response: <KeyPress from None: t=22.13718229997903, value=space, duration=None>
+22.1514 	DATA 	Keypress: space
+22.3998 	EXP 	Device response: <KeyPress from None: t=22.13718229997903, value=space, duration=0.2580252999905497>
+22.5168 	EXP 	Device response: <KeyPress from None: t=22.515075200004503, value=space, duration=None>
+22.5172 	DATA 	Keypress: space
+22.7841 	EXP 	Device response: <KeyPress from None: t=22.515075200004503, value=space, duration=0.2530472001526505>
+22.8827 	EXP 	Device response: <KeyPress from None: t=22.876732600154355, value=space, duration=None>
+22.8831 	DATA 	Keypress: space
+23.1327 	EXP 	Device response: <KeyPress from None: t=22.876732600154355, value=space, duration=0.2454769997857511>
+43.1418 	DATA 	Mouse: Left button down, pos=(512,320)
+43.2071 	DATA 	Mouse:  Left button up, pos=(512,320)
+43.7734 	EXP 	Device response: <KeyPress from None: t=43.76030840002932, value=space, duration=None>
+43.7738 	DATA 	Keypress: space
+43.8241 	EXP 	Device response: <KeyPress from None: t=43.76030840002932, value=space, duration=0.05900200014002621>
+44.7225 	DATA 	Mouse: Left button down, pos=(512,320)
+44.7899 	DATA 	Mouse:  Left button up, pos=(518,315)
+44.8888 	DATA 	Mouse: Left button down, pos=(520,314)
+44.9392 	DATA 	Mouse:  Left button up, pos=(520,314)
+45.6053 	EXP 	Device response: <KeyPress from None: t=45.591596900019795, value=space, duration=None>
+45.6057 	DATA 	Keypress: space
+45.6890 	DATA 	Mouse: Left button down, pos=(517,321)
+45.7224 	EXP 	Device response: <KeyPress from None: t=45.591596900019795, value=space, duration=0.1220760999713093>
+45.7725 	DATA 	Mouse:  Left button up, pos=(517,321)
+45.7901 	EXP 	Device response: <KeyPress from None: t=45.77307490003295, value=space, duration=None>
+45.7906 	DATA 	Keypress: space
+45.8724 	DATA 	Mouse: Left button down, pos=(517,321)
+45.9387 	EXP 	Device response: <KeyPress from None: t=45.77307490003295, value=space, duration=0.15852129994891584>
+45.9725 	DATA 	Mouse:  Left button up, pos=(517,319)
+46.0214 	EXP 	Device response: <KeyPress from None: t=46.01555380015634, value=space, duration=None>
+46.0218 	DATA 	Keypress: space
+46.1049 	EXP 	Device response: <KeyPress from None: t=46.01555380015634, value=space, duration=0.08260989980772138>
+46.1883 	EXP 	Device response: <KeyPress from None: t=46.181319900089875, value=space, duration=None>
+46.1886 	DATA 	Keypress: space
+46.2727 	EXP 	Device response: <KeyPress from None: t=46.181319900089875, value=space, duration=0.07790119992569089>
+46.3554 	EXP 	Device response: <KeyPress from None: t=46.34924850007519, value=space, duration=None>
+46.3559 	DATA 	Keypress: space
+46.4385 	EXP 	Device response: <KeyPress from None: t=46.34924850007519, value=space, duration=0.07638760004192591>
+46.5055 	EXP 	Device response: <KeyPress from None: t=46.50355969998054, value=space, duration=None>
+46.5059 	DATA 	Keypress: space
+46.6052 	EXP 	Device response: <KeyPress from None: t=46.50355969998054, value=space, duration=0.09342280006967485>
+64.7967 	DATA 	Mouse: Left button down, pos=(606,199)
+65.1297 	DATA 	Mouse:  Left button up, pos=(784,231)
+65.3639 	DATA 	Mouse: Left button down, pos=(634,436)
+65.4645 	DATA 	Mouse:  Left button up, pos=(634,436)
+65.5631 	DATA 	Mouse: Left button down, pos=(634,436)
+65.6466 	DATA 	Mouse:  Left button up, pos=(634,436)
+66.5125 	DATA 	Mouse: Left button down, pos=(259,42)
+66.7285 	DATA 	Mouse:  Left button up, pos=(504,134)
+66.9296 	DATA 	Mouse: Left button down, pos=(618,447)
+67.0957 	DATA 	Mouse:  Left button up, pos=(612,472)
+71.8775 	DATA 	Mouse: Left button down, pos=(485,369)
+71.9603 	DATA 	Mouse:  Left button up, pos=(485,369)
+72.5937 	DATA 	Mouse: Left button down, pos=(496,400)
+72.8260 	DATA 	Mouse:  Left button up, pos=(712,159)
+103.7781 	EXP 	Device response: <KeyPress from None: t=103.76613020012155, value=lshift, duration=None>
+103.7781 	EXP 	Device response: <KeyPress from None: t=103.77708679996431, value=lwindows, duration=None>
+103.7785 	DATA 	Keypress: lshift
+103.7785 	DATA 	Keypress: lwindows
+104.1636 	EXP 	Device response: <KeyPress from None: t=103.76613020012155, value=lshift, duration=0.3841323999222368>
+141.4446 	DATA 	Mouse: Left button down, pos=(401,366)
+141.5441 	DATA 	Mouse:  Left button up, pos=(401,366)
+141.6447 	DATA 	Mouse: Left button down, pos=(401,367)
+141.7282 	DATA 	Mouse:  Left button up, pos=(401,367)
+142.3931 	DATA 	Keypress: space
+142.4094 	EXP 	Device response: <KeyPress from None: t=142.39262790000066, value=space, duration=None>
+142.5111 	EXP 	Device response: <KeyPress from None: t=142.39262790000066, value=space, duration=0.10173860006034374>
+143.1431 	EXP 	Device response: <KeyPress from None: t=143.1411810000427, value=return, duration=None>
+143.1435 	DATA 	Keypress: return
+143.2597 	EXP 	Device response: <KeyPress from None: t=143.1411810000427, value=return, duration=0.1060085000935942>
+143.2922 	EXP 	Device response: <KeyPress from None: t=143.28241460002027, value=pound, duration=None>
+143.2925 	DATA 	Keypress: apostrophe
+143.3590 	EXP 	Device response: <KeyPress from None: t=143.28241460002027, value=pound, duration=0.06543239997699857>
+143.4600 	EXP 	Device response: <KeyPress from None: t=143.45785570004955, value=p, duration=None>
+143.4605 	DATA 	Keypress: p
+143.4766 	EXP 	Device response: <KeyPress from None: t=143.47410180000588, value=bracketleft, duration=None>
+143.4770 	DATA 	Keypress: bracketleft
+143.4925 	EXP 	Device response: <KeyPress from None: t=143.47410180000588, value=bracketleft, duration=0.010761599987745285>
+143.5088 	EXP 	Device response: <KeyPress from None: t=143.45785570004955, value=p, duration=0.03688929998315871>
+143.5088 	EXP 	Device response: <KeyPress from None: t=143.5046594000887, value=k, duration=None>
+143.5093 	DATA 	Keypress: k
+143.5590 	EXP 	Device response: <KeyPress from None: t=143.5046594000887, value=k, duration=0.0498412000015378>
+143.6934 	EXP 	Device response: <KeyPress from None: t=143.6785608001519, value=j, duration=None>
+143.6938 	DATA 	Keypress: j
+143.7752 	EXP 	Device response: <KeyPress from None: t=143.6785608001519, value=j, duration=0.08355639991350472>
+144.0098 	EXP 	Device response: <KeyPress from None: t=143.99827370001003, value=bracketleft, duration=None>
+144.0098 	EXP 	Device response: <KeyPress from None: t=144.0081991001498, value=p, duration=None>
+144.0102 	DATA 	Keypress: bracketleft
+144.0103 	DATA 	Keypress: p
+144.0750 	EXP 	Device response: <KeyPress from None: t=143.99827370001003, value=bracketleft, duration=0.07047179993242025>
+144.1099 	EXP 	Device response: <KeyPress from None: t=144.0081991001498, value=p, duration=0.09754809993319213>
+144.2102 	EXP 	Device response: <KeyPress from None: t=144.20603969995864, value=p, duration=None>
+144.2106 	DATA 	Keypress: p
+144.2262 	EXP 	Device response: <KeyPress from None: t=144.22502090013586, value=bracketright, duration=None>
+144.2266 	DATA 	Keypress: bracketright
+144.2920 	EXP 	Device response: <KeyPress from None: t=144.22502090013586, value=bracketright, duration=0.05147970002144575>
+144.3424 	EXP 	Device response: <KeyPress from None: t=144.20603969995864, value=p, duration=0.12506990018300712>
+144.3424 	EXP 	Device response: <KeyPress from None: t=144.3399704999756, value=l, duration=None>
+144.3429 	DATA 	Keypress: l
+144.3754 	EXP 	Device response: <KeyPress from None: t=144.3399704999756, value=l, duration=0.021114000119268894>
+145.3586 	DATA 	Mouse: Left button down, pos=(398,373)
+145.4254 	DATA 	Mouse:  Left button up, pos=(398,373)
+146.2585 	DATA 	Mouse: Left button down, pos=(760,456)
+146.2917 	DATA 	Mouse:  Left button up, pos=(774,458)
+187.3564 	DATA 	Mouse: Left button down, pos=(574,344)
+187.4722 	DATA 	Mouse:  Left button up, pos=(573,344)
+187.5386 	DATA 	Mouse: Left button down, pos=(573,344)
+187.6217 	DATA 	Mouse:  Left button up, pos=(572,344)
+200.6835 	DATA 	Mouse: Left button down, pos=(444,451)
+200.8332 	DATA 	Mouse:  Left button up, pos=(444,451)
+201.3317 	EXP 	Device response: <KeyPress from None: t=201.3251881999895, value=space, duration=None>
+201.3321 	DATA 	Keypress: space
+201.5654 	EXP 	Device response: <KeyPress from None: t=201.3251881999895, value=space, duration=0.23784690001048148>
+201.8655 	DATA 	Mouse: Left button down, pos=(442,419)
+202.0155 	EXP 	Device response: <KeyPress from None: t=202.00033490010537, value=space, duration=None>
+202.0159 	DATA 	Keypress: space
+202.1328 	DATA 	Mouse:  Left button up, pos=(442,419)
+202.4638 	EXP 	Device response: <KeyPress from None: t=202.00033490010537, value=space, duration=0.4530463998671621>
+207.9292 	DATA 	Mouse: Left button down, pos=(414,538)
+208.2287 	DATA 	Mouse:  Left button up, pos=(745,470)
+211.4788 	DATA 	Mouse: Left button down, pos=(401,343)
+211.5611 	DATA 	Mouse:  Left button up, pos=(402,343)
+216.0262 	EXP 	Device response: <KeyPress from None: t=216.02362530003302, value=ralt, duration=None>
+216.0266 	DATA 	Keypress: ralt
+225.3213 	DATA 	Keypress: space
+225.3376 	EXP 	Device response: <KeyPress from None: t=225.32105470006354, value=space, duration=None>
+225.4544 	EXP 	Device response: <KeyPress from None: t=225.32105470006354, value=space, duration=0.12733229994773865>
+225.8702 	EXP 	Device response: <KeyPress from None: t=225.8553508000914, value=space, duration=None>
+225.8707 	DATA 	Keypress: space
+225.9694 	EXP 	Device response: <KeyPress from None: t=225.8553508000914, value=space, duration=0.10172279994003475>
+226.1362 	EXP 	Device response: <KeyPress from None: t=226.1279205000028, value=space, duration=None>
+226.1368 	DATA 	Keypress: space
+226.2706 	EXP 	Device response: <KeyPress from None: t=226.1279205000028, value=space, duration=0.14183900016359985>
+226.3710 	EXP 	Device response: <KeyPress from None: t=226.3699696001131, value=space, duration=None>
+226.3715 	DATA 	Keypress: space
+226.4708 	EXP 	Device response: <KeyPress from None: t=226.3699696001131, value=space, duration=0.0975911000277847>
+226.5528 	EXP 	Device response: <KeyPress from None: t=226.54770440002903, value=space, duration=None>
+226.5532 	DATA 	Keypress: space
+226.6365 	EXP 	Device response: <KeyPress from None: t=226.54770440002903, value=space, duration=0.08667919994331896>
+226.7028 	EXP 	Device response: <KeyPress from None: t=226.6893090000376, value=space, duration=None>
+226.7033 	DATA 	Keypress: space
+226.8035 	EXP 	Device response: <KeyPress from None: t=226.6893090000376, value=space, duration=0.11207540007308125>
+240.2798 	EXP 	Device response: <KeyPress from None: t=240.272365400102, value=escape, duration=None>
+240.2802 	DATA 	Keypress: escape
+240.3958 	EXP 	Device response: <KeyPress from None: t=240.272365400102, value=escape, duration=0.11774310003966093>
+240.3959 	EXP 	ldt: status = STOPPED
+240.4115 	EXP 	instructionsText: autoDraw = False
+240.4133 	EXP 	ldt: status = STOPPED
+240.4185 	INFO 	saved data to 'C:\\Users\\zhaoc\\Desktop\\a5-ldt-build\\data\\1_ldt_2026-11-04_20h59.30.249.csv'
+240.4192 	INFO 	saved data to C:\Users\zhaoc\Desktop\a5-ldt-build\data\1_ldt_2026-11-04_20h59.30.249.psydat
+240.6318 	DEBUG 	Saving data for ldt ExperimentHandler
+240.6340 	INFO 	Stopping keyboard key buffers.

@@ -234,7 +234,7 @@
       <KeyboardComponent name="instructionsKey" plugin="None">
         <Param val="['space']" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
@@ -471,7 +471,7 @@
   <Flow>
     <Routine name="instructions"/>
     <LoopInitiator loopType="TrialHandler" name="practiceLoop">
-      <Param name="Selected rows" updates="None" val="slice(0, 8)" valType="code"/>
+      <Param name="Selected rows" updates="None" val="$list(range(0, 8))" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$'trial_lists/trials_p%02d.csv' % int(expInfo['participant'])" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="code"/>
@@ -487,7 +487,7 @@
     <LoopTerminator name="practiceLoop"/>
     <Routine name="breakScreen"/>
     <LoopInitiator loopType="TrialHandler" name="mainLoop">
-      <Param name="Selected rows" updates="None" val="slice(8, 104)" valType="code"/>
+      <Param name="Selected rows" updates="None" val="$list(range(8, 104))" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$'trial_lists/trials_p%02d.csv' % int(expInfo['participant'])" valType="file"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="code"/>

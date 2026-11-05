@@ -1,0 +1,79 @@
+8.4015 	DEBUG 	Fullscreen settings ignored as running in pilot mode.
+8.4022 	INFO 	Loaded monitor calibration from ['2026_09_02 11:41']
+8.5986 	INFO 	Using renderer 'AMD Radeon (TM) Graphics' for graphics
+8.5987 	INFO 	OpenGL version supported by driver is 4..
+8.6459 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001CA42624C40>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001CA426248E0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=False, gamma=None, gammaErrorPolicy='raise', infoMsg=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001CA4113A710>, multiSample=False, name='window1', numSamples=2, pos=[np.float64(560.0), np.float64(240.0)], screen=0, size=array([800, 600]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.6459 	EXP 	window1: backgroundImage = ''
+8.6459 	EXP 	window1: backgroundFit = 'none'
+8.6660 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.6779 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.6898 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7018 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7141 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7259 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7377 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7499 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7615 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7732 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7854 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.7974 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8093 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8212 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8332 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8460 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8584 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8704 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8825 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.8950 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.9071 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.9077 	DEBUG 	Uploading Texture Font fontname to graphics card
+8.9096 	DEBUG 	Upload of Texture Font fontname complete
+8.9272 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.9396 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.9530 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+8.9533 	DEBUG 	Uploading Texture Font fontname to graphics card
+8.9545 	DEBUG 	Upload of Texture Font fontname complete
+8.9562 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+8.9562 	EXP 	window1: recordFrameIntervals = False
+9.1263 	EXP 	window1: recordFrameIntervals = True
+10.7926 	EXP 	window1: recordFrameIntervals = False
+10.7926 	EXP 	Screen (0) actual frame rate measured at 59.93Hz
+10.8096 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8213 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8330 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8449 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8567 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8685 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8799 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.8920 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.9040 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.9159 	DEBUG 	TextBox2 loaded 1 chars with 0 blanks and 1 valid
+10.9162 	DEBUG 	Uploading Texture Font fontname to graphics card
+10.9170 	DEBUG 	Upload of Texture Font fontname complete
+11.0449 	INFO 	keyboard.Keyboard is using ptb backend.
+11.0450 	EXP 	ldt: status = STARTED
+11.0588 	EXP 	Created instructionsText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='instructionsText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0973 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+11.0982 	EXP 	Created primeStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='primeStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0987 	EXP 	Created targetStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='targetStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.0993 	EXP 	Created feedbackText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='feedbackText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.1010 	EXP 	Created blankText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='blankText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=' ', units='height', win=Window(...), wrapWidth=1)
+11.1072 	EXP 	Created breakText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='breakText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='height', win=Window(...), wrapWidth=1)
+11.1085 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='fixation', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='height', win=Window(...), wrapWidth=1)
+11.1092 	EXP 	Created primeStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='primeStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.1097 	EXP 	Created targetStim = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='targetStim', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+11.1109 	EXP 	Created blankText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='blankText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text=' ', units='height', win=Window(...), wrapWidth=1)
+11.1140 	EXP 	Created endText = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=np.float64(0.05), italic=False, languageStyle='LTR', name='endText', opacity=1, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1)
+0.0265 	INFO 	Keyboard events cleared
+0.0265 	EXP 	instructionsText: height = np.float64(0.05)
+0.0265 	EXP 	instructionsText: height = np.float64(0.05)
+0.0265 	EXP 	instructionsText: height = np.float64(0.05)
+0.0265 	EXP 	instructionsText: text = 'Press F for WORD and J for NONWORD.\n\nPress SPACE to begin.'
+0.0265 	EXP 	instructionsText: autoDraw = True
+1.1824 	EXP 	Device response: <KeyPress from None: t=1.1640335998963565, value=space, duration=None>
+1.1891 	DEBUG 	Read csv file with pandas: trial_lists/trials_p01.csv
+1.1899 	DEBUG 	Clearing unnamed columns from trial_lists/trials_p01.csv
+1.2146 	DEBUG 	Saving data for ldt ExperimentHandler
+1.2156 	INFO 	saved data to C:\Users\zhaoc\Desktop\a5-ldt-build\data\1_ldt_2026-11-04_21h05.38.295.psydat
+1.2162 	INFO 	saved data to 'C:\\Users\\zhaoc\\Desktop\\a5-ldt-build\\data\\1_ldt_2026-11-04_21h05.38.295.csv'
+1.2200 	INFO 	Stopping keyboard key buffers.
