@@ -11,21 +11,48 @@ You are graded on the reconciliation, not on being right.
 
 Answer for your own build, as participant 3.
 
-1. How many rows will the output file have? How many of them will be trials?
-   What will the other rows be?
+## Predictions
 
-2. Will any column name appear more than once? If so, which, and what will
-   each copy hold on a trial row?
+**1. How many rows will the output file have?**
 
-3. On an SOA 150 trial, what will `target_onset - prime_onset` be, in
-   milliseconds and in frames, on the machine you are using? On an SOA 1000
-   trial?
+I predict 107 rows: 104 trial rows (8 practice and 96 experimental), plus  3 nontrial rows associated with the instructions, break, and end screens. 
 
-4. What will the median `rt` be, roughly, and what proportion of trials will
-   be timeouts?
+**2. Will any column name appear more than once?**
 
-5. On a trial whose prime is `smoke` and whose target is `pepper`, what will
-   `prime_shown` and `target_shown` hold, exactly?
+I predict that no column names will be duplicated exactly. The practice and experimental loops use the same trial-list columns, but I expect PsychoPy to use shared column names for both. 
+**3. What will the prime-to-target onset intervals be?**
+
+Assuming my computer runs at 60 Hz:
+
+- SOA 150: approximately 150 ms, or 9 frames.
+- SOA 1000: approximately 1000 ms, or 60 frames.
+
+My current Builder version schedules these events in seconds rather than explicitly counting frames. Therefore, I expect small timing differences to be possible. I also predict that the current output may not contain the required `prime_onset` and `target_onset` columns.
+
+**4. What will the median RT and timeout proportion be?**
+
+I predict a median reaction time of approximately 0.65 seconds (650 ms), with about 5% of trials resulting in timeouts. My current Builder version records keyboard reaction times through `trialKey.rt`, rather than the required `rt` column.
+
+**5. What will `prime_shown` and `target_shown` contain?**
+
+For a trial with prime `smoke` and target `pepper`, I predict that the experiment will display:
+
+- Prime: `smoke`
+- Target: `PEPPER`
+
+However, the current Builder version does not yet explicitly save `prime_shown` and `target_shown`. I therefore predict these columns may be absent.
+
+## Reconciliation
+
+1.
+
+2.
+
+3.
+
+4.
+
+5.
 
 ## Reconciliation
 
