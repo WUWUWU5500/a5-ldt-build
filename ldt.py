@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2026.2.4),
-    on November 04, 2026, at 21:34
+    on November 17, 2026, at 20:15
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -45,7 +45,7 @@ expVersion = ''
 runAtExit = []
 # information about this experiment
 expInfo = {
-    'participant': '"1"',
+    'participant': '1',
     'session': '001',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
@@ -393,13 +393,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     feedbackFrames = int(round(1000 * ldt_hz / 1000))
     itiFrames = int(round(500 * ldt_hz / 1000))
     endFrames = int(round(2000 * ldt_hz / 1000))
+    # Run 'Begin Experiment' code from a6SessionFrameCode
+    # A6 I1/I2: log ONLY trial-screen flips, with a 1.5-frame drop threshold.
+    # frameDur was calculated by Builder from the measured, rounded frame rate.
+    win.refreshThreshold = 1.5 * frameDur
+    win.recordFrameIntervals = False
+    # Exclude anything accumulated during startup / frame-rate measurement.
+    win.frameIntervals = []
+    win.nDroppedFrames = 0
     instructionsText = visual.TextStim(win=win, name='instructionsText',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     instructionsKey = keyboard.Keyboard(deviceName='defaultKeyboard', backend='PsychToolbox')
     
     # --- Initialize components for Routine "trial" ---
@@ -409,21 +417,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     primeStim = visual.TextStim(win=win, name='primeStim',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-3.0);
     targetStim = visual.TextStim(win=win, name='targetStim',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-4.0);
     trialKey = keyboard.Keyboard(deviceName='defaultKeyboard', backend='PsychToolbox')
     
     # --- Initialize components for Routine "practiceFeedback" ---
@@ -461,21 +469,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-1.0);
+        depth=-2.0);
     primeStim = visual.TextStim(win=win, name='primeStim',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-2.0);
+        depth=-3.0);
     targetStim = visual.TextStim(win=win, name='targetStim',
         text='',
         font='Arial',
         pos=(0, 0), draggable=False, height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
-        depth=-3.0);
+        depth=-4.0);
     trialKey = keyboard.Keyboard(deviceName='defaultKeyboard', backend='PsychToolbox')
     
     # --- Initialize components for Routine "iti" ---
@@ -730,6 +738,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         soaFrames = int(round(float(soa) * ldt_hz / 1000))
         if soaFrames < primeFrames:
             raise ValueError("SOA shorter than prime duration")
+        # Run 'Begin Routine' code from a6FrameCode
+        # Start recording before the fixation-onset flip. PsychoPy ignores the
+        # first interval after enabling recording, excluding the preceding screen.
+        a6_drop_start = win.nDroppedFrames
+        win.recordFrameIntervals = True
         primeStim.setText(prime)
         targetStim.setText(target.upper())
         # create starting attributes for trialKey
@@ -769,6 +782,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from a6FrameCode
+            # The trial routine contains fixation, prime, and target only.
+            # Feedback and ITI are separate routines, so the end-routine hook below
+            # switches recording off after the last target-visible flip.
             
             # *fixation* updates
             
@@ -952,6 +969,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.tStop = globalClock.getTime(format='float')
         trial.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trial.stopped', trial.tStop)
+        # Run 'End Routine' code from a6FrameCode
+        # End the recording BEFORE the feedback/ITI or the next trial's first flip.
+        # nDroppedFrames increments on each recorded interval > refreshThreshold.
+        win.recordFrameIntervals = False
+        thisExp.addData('dropped_frames', int(win.nDroppedFrames - a6_drop_start))
         # check responses
         if trialKey.keys in ['', [], None]:  # No response was made
             trialKey.keys = None
@@ -1465,6 +1487,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         soaFrames = int(round(float(soa) * ldt_hz / 1000))
         if soaFrames < primeFrames:
             raise ValueError("SOA shorter than prime duration")
+        # Run 'Begin Routine' code from a6FrameCode
+        # Start recording before the fixation-onset flip. PsychoPy ignores the
+        # first interval after enabling recording, excluding the preceding screen.
+        a6_drop_start = win.nDroppedFrames
+        win.recordFrameIntervals = True
         primeStim.setText(prime)
         targetStim.setText(target.upper())
         # create starting attributes for trialKey
@@ -1504,6 +1531,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            # Run 'Each Frame' code from a6FrameCode
+            # The trial routine contains fixation, prime, and target only.
+            # Feedback and ITI are separate routines, so the end-routine hook below
+            # switches recording off after the last target-visible flip.
             
             # *fixation* updates
             
@@ -1687,6 +1718,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         trial.tStop = globalClock.getTime(format='float')
         trial.tStopRefresh = tThisFlipGlobal
         thisExp.addData('trial.stopped', trial.tStop)
+        # Run 'End Routine' code from a6FrameCode
+        # End the recording BEFORE the feedback/ITI or the next trial's first flip.
+        # nDroppedFrames increments on each recorded interval > refreshThreshold.
+        win.recordFrameIntervals = False
+        thisExp.addData('dropped_frames', int(win.nDroppedFrames - a6_drop_start))
         # check responses
         if trialKey.keys in ['', [], None]:  # No response was made
             trialKey.keys = None
@@ -1983,6 +2019,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     thisExp.nextEntry()
     # the Routine "endScreen" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
+    # Run 'End Experiment' code from a6SessionFrameCode
+    # Preserve I1's interval sequence (seconds, comma-separated).
+    # The path mirrors the main CSV stem used by thisExp.saveAsWideText().
+    win.recordFrameIntervals = False
+    win.saveFrameIntervals(fileName=thisExp.dataFileName + '_frameIntervals.log')
     
     # mark experiment as finished
     endExperiment(thisExp, win=win)
