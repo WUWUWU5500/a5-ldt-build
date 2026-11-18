@@ -31,16 +31,22 @@ My A5 participant 3 and participant 6 files each contain **107 rows** (one instr
 
 | Configuration | Participant 7 — quiet | Participant 8 — Chrome video |
 |---|---|---|
-| Computer and OS | Windows 11; **exact machine model to confirm locally** | Same computer and OS |
-| Display and OS-selected refresh rate | **OS display model/setting not independently recorded**; experiment measured/rounded **60 Hz** | Same display; experiment measured/rounded **60 Hz** |
-| PsychoPy window | Fullscreen `True` in normal Run mode (from generated script); Pilot is windowed by preference | Same normal Run-mode setting |
-| PsychoPy | 2026.2.4 | 2026.2.4 |
-| Main load | Unnecessary applications closed | A muted video playing in Google Chrome in background |
+| Computer and OS | Lenovo 83CR laptop, Windows 11 | Same Lenovo 83CR laptop, Windows 11 |
+| Display and resolution | Internal display, 1920 × 1080, AMD Radeon Graphics | Same internal display and resolution |
+| Windows refresh rate | 60 Hz, confirmed in Windows Advanced Display settings | 60 Hz, same display configuration |
+| PsychoPy measured refresh rate | 60 Hz, measured and rounded at experiment startup | 60 Hz, measured and rounded at experiment startup |
+| PsychoPy window | Fullscreen `True` in normal Run mode; Pilot uses windowed mode according to preferences | Same normal Run-mode setting |
+| PsychoPy version | 2026.2.4 | 2026.2.4 |
+| Main load | Unnecessary applications closed; quiet condition | Muted video playing continuously in Google Chrome in the background |
 | Scheduled full trials | 8 practice + 96 experimental | 8 practice + 96 experimental |
 | CSV file | `data/7_ldt_2026-11-17_20h24.57.075.csv` | `data/8_ldt_2026-11-17_20h31.06.094.csv` |
-| I1 log | Matching `_frameIntervals.log` | Matching `_frameIntervals.log` |
+| I1 log | `data/7_ldt_2026-11-17_20h24.57.075_frameIntervals.log` | `data/8_ldt_2026-11-17_20h31.06.094_frameIntervals.log` |
 
-The exact computer model, display model and Windows **Settings → System → Display → Advanced display** refresh-rate setting were not captured in the supplied verification records and must be entered from the test machine rather than guessed. The saved software `frameRate` field is not the same as an independently documented Windows setting.
+Both runs were conducted on the same Lenovo 83CR laptop running Windows 11. The internal display was configured to 1920 × 1080 at 60 Hz, as confirmed in Windows Advanced Display settings. PsychoPy independently measured and rounded the refresh rate to 60 Hz in both runs. At this refresh rate, one nominal display frame lasts approximately 16.67 ms.
+
+Participant 7 completed the quiet condition with unnecessary applications closed. Participant 8 completed the video condition while a muted video played continuously in Google Chrome in the background. Both experiments were conducted in normal Run mode, with 104 trials each (8 practice and 96 experimental). All trials were completed, and the corresponding CSV and I1 frame-interval log files were generated.
+
+The two conditions differed in background computer workload, but the observations from one run per condition cannot establish a causal effect of browser-video playback on frame timing. Both runs used the same display and refresh-rate configuration.
 
 ### 2.2 Expected frame counts and achieved software timestamp distributions
 
