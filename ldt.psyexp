@@ -86,6 +86,23 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="trialTimingCode" valType="code" updates="None" name="name"/>
       </CodeComponent>
+      <CodeComponent name="a6FrameCode" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="# A6 I1/I2: log ONLY trial-screen flips, with a 1.5-frame drop threshold.&amp;#10;# frameDur was calculated by Builder from the measured, rounded frame rate.&amp;#10;win.refreshThreshold = 1.5 * frameDur&amp;#10;win.recordFrameIntervals = False&amp;#10;# Exclude anything accumulated during startup / frame-rate measurement.&amp;#10;win.frameIntervals = []&amp;#10;win.nDroppedFrames = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# Start recording before the fixation-onset flip. PsychoPy ignores the&amp;#10;# first interval after enabling recording, excluding the preceding screen.&amp;#10;a6_drop_start = win.nDroppedFrames&amp;#10;win.recordFrameIntervals = True" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Py" valType="str" updates="None" name="Code Type"/>
+        <Param val="# The trial routine contains fixation, prime, and target only.&amp;#10;# Feedback and ITI are separate routines, so the end-routine hook below&amp;#10;# switches recording off after the last target-visible flip." valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="# Preserve I1&#x27;s interval sequence (seconds, comma-separated).&amp;#10;# The path mirrors the main CSV stem used by thisExp.saveAsWideText().&amp;#10;win.recordFrameIntervals = False&amp;#10;win.saveFrameIntervals(fileName=thisExp.dataFileName + &#x27;_frameIntervals.log&#x27;)" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="# End the recording BEFORE the feedback/ITI or the next trial&#x27;s first flip.&amp;#10;# nDroppedFrames increments on each recorded interval &gt; refreshThreshold.&amp;#10;win.recordFrameIntervals = False&amp;#10;thisExp.addData(&#x27;dropped_frames&#x27;, int(win.nDroppedFrames - a6_drop_start))" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="a6FrameCode" valType="code" updates="None" name="name"/>
+      </CodeComponent>
       <TextComponent name="fixation" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
