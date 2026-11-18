@@ -1,0 +1,120 @@
+﻿Software-timestamp audit; frames inferred from refresh duration, not measured directly by photodiode.
+Target counts at 60 Hz: fixation=30, prime=9, SOA150=9, SOA1000=60, ITI=30, feedback=60, end=120
+Target counts at 75 Hz: fixation=38, prime=11, SOA150=11, SOA1000=75, ITI=38, feedback=75, end=150
+Target counts at 120 Hz: fixation=60, prime=18, SOA150=18, SOA1000=120, ITI=60, feedback=120, end=240
+Target counts at 144 Hz: fixation=72, prime=22, SOA150=22, SOA1000=144, ITI=72, feedback=144, end=288
+
+=== INSTRUMENTED CSV COLUMN ORDER (P7) ===
+01. participant
+02. phase
+03. trial_index
+04. item_id
+05. target
+06. prime
+07. relatedness
+08. soa
+09. correct_response
+10. seed
+11. thisN
+12. thisTrialN
+13. thisRepN
+14. trialKey.keys
+15. trialKey.rt
+16. trialKey.duration
+17. practiceLoop.thisRepN
+18. practiceLoop.thisTrialN
+19. practiceLoop.thisN
+20. practiceLoop.thisIndex
+21. mainLoop.thisRepN
+22. mainLoop.thisTrialN
+23. mainLoop.thisN
+24. mainLoop.thisIndex
+25. thisRow.t
+26. notes
+27. piloting
+28. instructions.started
+29. instructionsText.started
+30. instructionsKey.started
+31. instructions.stopped
+32. instructionsKey.keys
+33. instructionsKey.rt
+34. instructionsKey.duration
+35. trial.started
+36. fixation.started
+37. fixation.stopped
+38. primeStim.started
+39. primeStim.stopped
+40. targetStim.started
+41. trialKey.started
+42. trial.stopped
+43. dropped_frames
+44. practiceLoop.trialKey.keys
+45. practiceLoop.trialKey.rt
+46. practiceLoop.trialKey.duration
+47. prime_shown
+48. target_shown
+49. prime_onset
+50. target_onset
+51. key
+52. rt
+53. accuracy
+54. timeout
+55. practiceFeedback.started
+56. feedbackText.started
+57. feedbackText.stopped
+58. practiceFeedback.stopped
+59. iti.started
+60. blankText.started
+61. blankText.stopped
+62. iti.stopped
+63. breakScreen.started
+64. breakText.started
+65. breakKey.started
+66. breakScreen.stopped
+67. breakKey.keys
+68. breakKey.rt
+69. breakKey.duration
+70. mainLoop.trialKey.keys
+71. mainLoop.trialKey.rt
+72. mainLoop.trialKey.duration
+73. endScreen.started
+74. endText.started
+75. endText.stopped
+76. endScreen.stopped
+77. participant__copy2
+78. session
+79. date
+80. expName
+81. expVersion
+82. psychopyVersion
+83. frameRate
+84. expStart
+85. 
+
+=== PARTICIPANT 7: 7_ldt_2026-11-17_20h24.57.075.csv ===
+Rows: 107; trials 104; refresh 60 Hz
+| Event | Expected frames | Observed (frames: n) | Range, ms | Deviations, trial: actual (trial drops) |
+|---|---:|---|---|---|
+| fixation | 30 | 30: 104 | 492.27û501.40 | none |
+| prime | 9 | 9: 104 | 149.04û151.85 | none |
+| SOA 150 | 9 | 9: 52 | 149.10û151.85 | none |
+| SOA 1000 | 60 | 60: 52 | 998.53û1000.96 | none |
+| ITI | 30 | 30: 103, 33: 1 | 498.17û557.75 | experimental/19: 33 (I2=0) |
+| practice feedback | 60 | 60: 8 | 998.07û1000.87 | none |
+| end screen | 120 | 120: 1 | 1997.63û1997.63 | none |
+I1 intervals: 8193; sum 136.478 sec; longest 19.814 ms
+I2 CSV total: 0; interval-log count > 25.000 ms: 0; agreement: PASS
+
+=== PARTICIPANT 8: 8_ldt_2026-11-17_20h31.06.094.csv ===
+Rows: 107; trials 104; refresh 60 Hz
+| Event | Expected frames | Observed (frames: n) | Range, ms | Deviations, trial: actual (trial drops) |
+|---|---:|---|---|---|
+| fixation | 30 | 30: 104 | 494.41û501.64 | none |
+| prime | 9 | 9: 104 | 146.91û151.86 | none |
+| SOA 150 | 9 | 9: 52 | 146.91û151.45 | none |
+| SOA 1000 | 60 | 60: 52 | 997.42û1000.99 | none |
+| ITI | 30 | 30: 103, 33: 1 | 495.87û556.57 | experimental/21: 33 (I2=0) |
+| practice feedback | 60 | 60: 8 | 998.92û1003.94 | none |
+| end screen | 120 | 120: 1 | 1997.79û1997.79 | none |
+I1 intervals: 8088; sum 134.734 sec; longest 25.809 ms
+I2 CSV total: 1; interval-log count > 25.000 ms: 1; agreement: PASS
