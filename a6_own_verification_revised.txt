@@ -1,0 +1,140 @@
+﻿==========================================================================================
+.\data\3_ldt_2026-11-04_21h40.50.643.csv
+ROWS: 107 total, 104 trials, 3 nontrial
+Q1   PASS         startup-dialog participant=3 (rightmost participant column); all 104 condition rows match trial_lists\trials_p03.csv as a multiset (order checked separately in Q2).
+Q2   PASS         Exactly 104 rows in exact list order (8 practice, 96 experimental); 3 nontrial rows excluded.
+Q3   PASS         104 trial rows: 8 practice first, then 96 experimental, in recorded order.
+Q3   UNDETERMINED Trial CSV cannot prove instruction text, SPACE gating, feedback visibility, break behavior, or final 2-s display. Inspect Builder and watch a complete run; hardware is needed for physical durations.
+Q4   PASS         prime->target SOA: all 104 events match scheduled integer frame equivalents using measured cadence ~16.663 ms, scheduled rate 61 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         fixation: all 104 events match scheduled integer frame equivalents using measured cadence ~16.663 ms, scheduled rate 61 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         prime: all 104 events match scheduled integer frame equivalents using measured cadence ~16.663 ms, scheduled rate 61 Hz (software timestamp inference, not photodiode timing).
+Q4   UNDETERMINED Software timestamps cannot establish physical light onset, actual blank-gap visibility, or target cutoff; inspect Builder and/or use hardware timing.
+Q5   PASS         Recorded refresh rate is a positive rounded integer: 61 Hz.
+Q5   FAIL         inter-trial interval: 1/104 software frame-equivalent deviations; first ['row 25: measured 34 vs expected 30 frame-equivalents (559.7 ms, outside I1/I2 trial recording; no local frame-drop inference)']. A drop flag explains risk but does not prove the affected event.
+Q5   PASS         practice feedback: all 8 events match scheduled integer frame equivalents using measured cadence ~16.663 ms, scheduled rate 61 Hz (software timestamp inference, not photodiode timing).
+Q5   PASS         end screen: all 1 events match scheduled integer frame equivalents using measured cadence ~16.663 ms, scheduled rate 61 Hz (software timestamp inference, not photodiode timing).
+Q5   UNDETERMINED CSV frame equivalents cannot prove that Builder specified every duration in frames or that the display emitted photons at those times.
+Q6   PASS         All recorded trial responses are f, j, or empty (could fail if any other key was recorded).
+Q6   UNDETERMINED The CSV cannot establish that irrelevant keys are ignored or Escape quits; test in Pilot mode.
+Q7   PASS         Keyboard and target start on the same logged refresh on all 104 trials (trialKey.started versus targetStim.started; <=2 ms tolerance).
+Q7   UNDETERMINED Matching component-start timestamps alone cannot prove the keyboard RT clock was reset on that screen flip or that no earlier keystrokes leaked in; inspect generated code and test with intentionally early and late keys.
+Q8   PASS         All prime_shown values equal lowercase source primes; all target_shown equal uppercase targets.
+Q8   UNDETERMINED CSV agreement alone cannot prove that text came from the actual visual object rather than a copied condition; inspect Code component.
+Q9   PASS         Both custom onset fields match the primeStim.started/targetStim.started logged flip timestamps across 104 trials (2 ms tolerance).
+Q9   UNDETERMINED Software flip timestamps do not establish photon emission timing; a photodiode would be needed for physical onset.
+Q10  PASS         All ten trial-list columns and key/rt/accuracy/timeout appear in the output header.
+Q10  PASS         All 104 trials have internally consistent key/RT/accuracy/timeout for participant 3.
+Q10  UNDETERMINED Duplicate header names {'participant': 2}; raw CSV preserves both, but import software may rename them. Confirm provenance in Builder.
+I1   UNDETERMINED This output predates I1/I2 or is provided without an instrumented build; need a new complete run with I1/I2 to audit frame delivery.
+I2   UNDETERMINED This output predates I1/I2 or is provided without an instrumented build; need a new complete run with I1/I2 to audit frame delivery.
+Q3   PILOT        BUILDER EVIDENCE: Generated Builder script establishes the programmed instructions/practice/feedback/break/main/end sequence; visible behavior was piloted separately.
+Q5   PILOT        BUILDER EVIDENCE: Builder script schedules fixed events by integer frame numbers; physical presentation still requires separate evidence.
+Q6   PILOT        BUILDER EVIDENCE: Builder code limits trial keys to F/J and checks Escape independently; the CSV cannot test every irrelevant key.
+Q7   PILOT        BUILDER EVIDENCE: Builder code resets and clears the response device on the target flip.
+Q8   PILOT        BUILDER EVIDENCE: Shown stimulus strings are read from the live PsychoPy TextStim objects in the compiled Builder code.
+Q9   PILOT        BUILDER EVIDENCE: Custom onset values come from visual-object refresh timestamps, not arbitrary condition-string times.
+==========================================================================================
+.\data\6_ldt_2026-11-04_21h44.32.454.csv
+ROWS: 107 total, 104 trials, 3 nontrial
+Q1   PASS         startup-dialog participant=6 (rightmost participant column); all 104 condition rows match trial_lists\trials_p06.csv as a multiset (order checked separately in Q2).
+Q2   PASS         Exactly 104 rows in exact list order (8 practice, 96 experimental); 3 nontrial rows excluded.
+Q3   PASS         104 trial rows: 8 practice first, then 96 experimental, in recorded order.
+Q3   UNDETERMINED Trial CSV cannot prove instruction text, SPACE gating, feedback visibility, break behavior, or final 2-s display. Inspect Builder and watch a complete run; hardware is needed for physical durations.
+Q4   FAIL         prime->target SOA: 1/104 software frame-equivalent deviations; first ['row 26: measured 63 vs expected 60 frame-equivalents (1048.1 ms, I2 not recorded; mechanism unknown)']. A drop flag explains risk but does not prove the affected event.
+Q4   PASS         fixation: all 104 events match scheduled integer frame equivalents using measured cadence ~16.661 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         prime: all 104 events match scheduled integer frame equivalents using measured cadence ~16.661 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   UNDETERMINED Software timestamps cannot establish physical light onset, actual blank-gap visibility, or target cutoff; inspect Builder and/or use hardware timing.
+Q5   PASS         Recorded refresh rate is a positive rounded integer: 60 Hz.
+Q5   PASS         inter-trial interval: all 104 events match scheduled integer frame equivalents using measured cadence ~16.661 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q5   PASS         practice feedback: all 8 events match scheduled integer frame equivalents using measured cadence ~16.661 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q5   UNDETERMINED end screen: no recognized component start/stop pair.
+Q5   UNDETERMINED CSV frame equivalents cannot prove that Builder specified every duration in frames or that the display emitted photons at those times.
+Q6   PASS         All recorded trial responses are f, j, or empty (could fail if any other key was recorded).
+Q6   UNDETERMINED The CSV cannot establish that irrelevant keys are ignored or Escape quits; test in Pilot mode.
+Q7   PASS         Keyboard and target start on the same logged refresh on all 104 trials (trialKey.started versus targetStim.started; <=2 ms tolerance).
+Q7   UNDETERMINED Matching component-start timestamps alone cannot prove the keyboard RT clock was reset on that screen flip or that no earlier keystrokes leaked in; inspect generated code and test with intentionally early and late keys.
+Q8   PASS         All prime_shown values equal lowercase source primes; all target_shown equal uppercase targets.
+Q8   UNDETERMINED CSV agreement alone cannot prove that text came from the actual visual object rather than a copied condition; inspect Code component.
+Q9   PASS         Both custom onset fields match the primeStim.started/targetStim.started logged flip timestamps across 104 trials (2 ms tolerance).
+Q9   UNDETERMINED Software flip timestamps do not establish photon emission timing; a photodiode would be needed for physical onset.
+Q10  PASS         All ten trial-list columns and key/rt/accuracy/timeout appear in the output header.
+Q10  PASS         All 104 trials have internally consistent key/RT/accuracy/timeout for participant 6.
+Q10  UNDETERMINED Duplicate header names {'participant': 2}; raw CSV preserves both, but import software may rename them. Confirm provenance in Builder.
+I1   UNDETERMINED This output predates I1/I2 or is provided without an instrumented build; need a new complete run with I1/I2 to audit frame delivery.
+I2   UNDETERMINED This output predates I1/I2 or is provided without an instrumented build; need a new complete run with I1/I2 to audit frame delivery.
+Q3   PILOT        BUILDER EVIDENCE: Generated Builder script establishes the programmed instructions/practice/feedback/break/main/end sequence; visible behavior was piloted separately.
+Q5   PILOT        BUILDER EVIDENCE: Builder script schedules fixed events by integer frame numbers; physical presentation still requires separate evidence.
+Q6   PILOT        BUILDER EVIDENCE: Builder code limits trial keys to F/J and checks Escape independently; the CSV cannot test every irrelevant key.
+Q7   PILOT        BUILDER EVIDENCE: Builder code resets and clears the response device on the target flip.
+Q8   PILOT        BUILDER EVIDENCE: Shown stimulus strings are read from the live PsychoPy TextStim objects in the compiled Builder code.
+Q9   PILOT        BUILDER EVIDENCE: Custom onset values come from visual-object refresh timestamps, not arbitrary condition-string times.
+==========================================================================================
+.\data\7_ldt_2026-11-17_20h24.57.075.csv
+ROWS: 107 total, 104 trials, 3 nontrial
+Q1   PASS         startup-dialog participant=7 (rightmost participant column); all 104 condition rows match trial_lists\trials_p07.csv as a multiset (order checked separately in Q2).
+Q2   PASS         Exactly 104 rows in exact list order (8 practice, 96 experimental); 3 nontrial rows excluded.
+Q3   PASS         104 trial rows: 8 practice first, then 96 experimental, in recorded order.
+Q3   UNDETERMINED Trial CSV cannot prove instruction text, SPACE gating, feedback visibility, break behavior, or final 2-s display. Inspect Builder and watch a complete run; hardware is needed for physical durations.
+Q4   PASS         prime->target SOA: all 104 events match scheduled integer frame equivalents using measured cadence ~16.658 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         fixation: all 104 events match scheduled integer frame equivalents using measured cadence ~16.658 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         prime: all 104 events match scheduled integer frame equivalents using measured cadence ~16.658 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   UNDETERMINED Software timestamps cannot establish physical light onset, actual blank-gap visibility, or target cutoff; inspect Builder and/or use hardware timing.
+Q5   PASS         Recorded refresh rate is a positive rounded integer: 60 Hz.
+Q5   FAIL         inter-trial interval: 1/104 software frame-equivalent deviations; first ['row 27: measured 33 vs expected 30 frame-equivalents (557.8 ms, outside I1/I2 trial recording; no local frame-drop inference)']. A drop flag explains risk but does not prove the affected event.
+Q5   PASS         practice feedback: all 8 events match scheduled integer frame equivalents using measured cadence ~16.658 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q5   PASS         end screen: all 1 events match scheduled integer frame equivalents using measured cadence ~16.658 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q5   UNDETERMINED CSV frame equivalents cannot prove that Builder specified every duration in frames or that the display emitted photons at those times.
+Q6   PASS         All recorded trial responses are f, j, or empty (could fail if any other key was recorded).
+Q6   UNDETERMINED The CSV cannot establish that irrelevant keys are ignored or Escape quits; test in Pilot mode.
+Q7   PASS         Keyboard and target start on the same logged refresh on all 104 trials (trialKey.started versus targetStim.started; <=2 ms tolerance).
+Q7   UNDETERMINED Matching component-start timestamps alone cannot prove the keyboard RT clock was reset on that screen flip or that no earlier keystrokes leaked in; inspect generated code and test with intentionally early and late keys.
+Q8   PASS         All prime_shown values equal lowercase source primes; all target_shown equal uppercase targets.
+Q8   UNDETERMINED CSV agreement alone cannot prove that text came from the actual visual object rather than a copied condition; inspect Code component.
+Q9   PASS         Both custom onset fields match the primeStim.started/targetStim.started logged flip timestamps across 104 trials (2 ms tolerance).
+Q9   UNDETERMINED Software flip timestamps do not establish photon emission timing; a photodiode would be needed for physical onset.
+Q10  PASS         All ten trial-list columns and key/rt/accuracy/timeout appear in the output header.
+Q10  PASS         All 104 trials have internally consistent key/RT/accuracy/timeout for participant 7.
+Q10  UNDETERMINED Duplicate header names {'participant': 2}; raw CSV preserves both, but import software may rename them. Confirm provenance in Builder.
+I1   PASS         8193 intervals, sum=136.478s, max=19.81ms; trial-screen span=136.509s; difference=0.031s; tolerance=5.200s. Builder code intends to exclude feedback/ITI/instructions/break/end.
+I2   PASS         per-trial CSV drops=0; logged intervals >25.000ms=0; 104 trial rows.
+Q3   PILOT        BUILDER EVIDENCE: Generated Builder script establishes the programmed instructions/practice/feedback/break/main/end sequence; visible behavior was piloted separately.
+Q5   PILOT        BUILDER EVIDENCE: Builder script schedules fixed events by integer frame numbers; physical presentation still requires separate evidence.
+Q6   PILOT        BUILDER EVIDENCE: Builder code limits trial keys to F/J and checks Escape independently; the CSV cannot test every irrelevant key.
+Q7   PILOT        BUILDER EVIDENCE: Builder code resets and clears the response device on the target flip.
+Q8   PILOT        BUILDER EVIDENCE: Shown stimulus strings are read from the live PsychoPy TextStim objects in the compiled Builder code.
+Q9   PILOT        BUILDER EVIDENCE: Custom onset values come from visual-object refresh timestamps, not arbitrary condition-string times.
+==========================================================================================
+.\data\8_ldt_2026-11-17_20h31.06.094.csv
+ROWS: 107 total, 104 trials, 3 nontrial
+Q1   PASS         startup-dialog participant=8 (rightmost participant column); all 104 condition rows match trial_lists\trials_p08.csv as a multiset (order checked separately in Q2).
+Q2   PASS         Exactly 104 rows in exact list order (8 practice, 96 experimental); 3 nontrial rows excluded.
+Q3   PASS         104 trial rows: 8 practice first, then 96 experimental, in recorded order.
+Q3   UNDETERMINED Trial CSV cannot prove instruction text, SPACE gating, feedback visibility, break behavior, or final 2-s display. Inspect Builder and watch a complete run; hardware is needed for physical durations.
+Q4   PASS         prime->target SOA: all 104 events match scheduled integer frame equivalents using measured cadence ~16.662 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         fixation: all 104 events match scheduled integer frame equivalents using measured cadence ~16.662 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   PASS         prime: all 104 events match scheduled integer frame equivalents using measured cadence ~16.662 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q4   UNDETERMINED Software timestamps cannot establish physical light onset, actual blank-gap visibility, or target cutoff; inspect Builder and/or use hardware timing.
+Q5   PASS         Recorded refresh rate is a positive rounded integer: 60 Hz.
+Q5   FAIL         inter-trial interval: 1/104 software frame-equivalent deviations; first ['row 29: measured 33 vs expected 30 frame-equivalents (556.6 ms, outside I1/I2 trial recording; no local frame-drop inference)']. A drop flag explains risk but does not prove the affected event.
+Q5   PASS         practice feedback: all 8 events match scheduled integer frame equivalents using measured cadence ~16.662 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q5   PASS         end screen: all 1 events match scheduled integer frame equivalents using measured cadence ~16.662 ms, scheduled rate 60 Hz (software timestamp inference, not photodiode timing).
+Q5   UNDETERMINED CSV frame equivalents cannot prove that Builder specified every duration in frames or that the display emitted photons at those times.
+Q6   PASS         All recorded trial responses are f, j, or empty (could fail if any other key was recorded).
+Q6   UNDETERMINED The CSV cannot establish that irrelevant keys are ignored or Escape quits; test in Pilot mode.
+Q7   PASS         Keyboard and target start on the same logged refresh on all 104 trials (trialKey.started versus targetStim.started; <=2 ms tolerance).
+Q7   UNDETERMINED Matching component-start timestamps alone cannot prove the keyboard RT clock was reset on that screen flip or that no earlier keystrokes leaked in; inspect generated code and test with intentionally early and late keys.
+Q8   PASS         All prime_shown values equal lowercase source primes; all target_shown equal uppercase targets.
+Q8   UNDETERMINED CSV agreement alone cannot prove that text came from the actual visual object rather than a copied condition; inspect Code component.
+Q9   PASS         Both custom onset fields match the primeStim.started/targetStim.started logged flip timestamps across 104 trials (2 ms tolerance).
+Q9   UNDETERMINED Software flip timestamps do not establish photon emission timing; a photodiode would be needed for physical onset.
+Q10  PASS         All ten trial-list columns and key/rt/accuracy/timeout appear in the output header.
+Q10  PASS         All 104 trials have internally consistent key/RT/accuracy/timeout for participant 8.
+Q10  UNDETERMINED Duplicate header names {'participant': 2}; raw CSV preserves both, but import software may rename them. Confirm provenance in Builder.
+I1   PASS         8088 intervals, sum=134.734s, max=25.81ms; trial-screen span=134.769s; difference=0.036s; tolerance=5.200s. Builder code intends to exclude feedback/ITI/instructions/break/end.
+I2   PASS         per-trial CSV drops=1; logged intervals >25.000ms=1; 104 trial rows.
+Q3   PILOT        BUILDER EVIDENCE: Generated Builder script establishes the programmed instructions/practice/feedback/break/main/end sequence; visible behavior was piloted separately.
+Q5   PILOT        BUILDER EVIDENCE: Builder script schedules fixed events by integer frame numbers; physical presentation still requires separate evidence.
+Q6   PILOT        BUILDER EVIDENCE: Builder code limits trial keys to F/J and checks Escape independently; the CSV cannot test every irrelevant key.
+Q7   PILOT        BUILDER EVIDENCE: Builder code resets and clears the response device on the target flip.
+Q8   PILOT        BUILDER EVIDENCE: Shown stimulus strings are read from the live PsychoPy TextStim objects in the compiled Builder code.
+Q9   PILOT        BUILDER EVIDENCE: Custom onset values come from visual-object refresh timestamps, not arbitrary condition-string times.

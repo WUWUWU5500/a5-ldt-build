@@ -211,54 +211,203 @@ def num(output: Output, row: list[str], name: str) -> float | None:
         return None
 
 
-def check_q4(output: Output, lists_dir: str) -> list[tuple[str, str]]:
-    """Check measured prime-to-target SOA and note unobservable visual effects."""
-    if not output.has("prime_onset", "target_onset", "soa"):
-        return [("UNDETERMINED", "No recorded onset+SOA columns to test; inspect the Builder schedule and perform a controlled Pilot run.")]
-    errors: list[str] = []
-    tested = 0
-    for i, row in enumerate(output.trials, 1):
-        prime, target, soa = (num(output,row,x) for x in ("prime_onset", "target_onset", "soa"))
-        if None in (prime, target, soa):
-            errors.append(f"trial {i}: absent/non-numeric timestamp or SOA")
+def _rounded_hz(output: Output) -> int | None:
+    """A single positive integer refresh rate shared by trial rows."""
+    vals = {num(output, row, "frameRate") for row in output.trials}
+    if len(vals) != 1 or None in vals:
+        return None
+    value = next(iter(vals))
+    if value <= 0 or not value.is_integer():
+        return None
+    return int(value)
+
+
+def _drop_context(output: Output, row: list[str], inside_trial: bool) -> str:
+    """A per-trial drop flags a *possible*, not demonstrated, local cause."""
+    if not inside_trial:
+        return "outside I1/I2 trial recording; no local frame-drop inference"
+    drops = num(output, row, "dropped_frames")
+    if drops is None:
+        return "I2 not recorded; mechanism unknown"
+    if drops < 0 or not drops.is_integer():
+        return "invalid I2 value; mechanism unknown"
+    if drops > 0:
+        return f"I2={int(drops)} on trial (possible delayed flip, not localized to this event)"
+    return "I2=0 on trial (no logged >1.5-frame interval)"
+
+
+def _estimated_cadence(output: Output, nominal_hz: int) -> float:
+    """Estimate actual flip period robustly from repeated screen timestamps.
+
+    PsychoPy sometimes rounds its screen-rate *estimate* to 61 while the
+    physical refresh is 60 Hz. Using 1/61 for judging 61 scheduled frames
+    would wrongly call a correct ~1016.7 ms interval a 62-frame failure.
+    Anchor the cadence on multiple event types so one systematically wrong
+    stimulus duration cannot simply define its own expected frame period.
+    """
+    import statistics
+    ratios = []
+    for names, expected_ms in (
+        (("fixation", "fixation_text", "fixText"), 500),
+        (("primeStim", "prime_text", "primeText", "prime_stim"), 150),
+    ):
+        base = next((n for n in names if output.has(f"{n}.started", f"{n}.stopped")), None)
+        if base:
+            expected = round(expected_ms * nominal_hz / 1000)
+            for row in output.trials:
+                start = num(output, row, f"{base}.started")
+                stop = num(output, row, f"{base}.stopped")
+                if start is not None and stop is not None and stop > start:
+                    ratios.append((stop-start)/expected)
+    if output.has("prime_onset", "target_onset", "soa"):
+        for row in output.trials:
+            p = num(output, row, "prime_onset")
+            t = num(output, row, "target_onset")
+            soa = num(output, row, "soa")
+            if p is not None and t is not None and soa is not None and t > p:
+                frames = round(soa * nominal_hz / 1000)
+                if frames > 0:
+                    ratios.append((t-p)/frames)
+    # Many independent timestamp samples are required before estimating
+    # a cadence different from nominal; otherwise fall back conservatively.
+    return statistics.median(ratios) if len(ratios) >= 10 else 1 / nominal_hz
+
+
+def _frame_duration_check(
+    output: Output,
+    label: str,
+    rows: list[list[str]],
+    start_col: str,
+    stop_col: str,
+    expected_ms: int | None,
+    inside_trial: bool,
+) -> tuple[str, str]:
+    """Compare measured timestamp intervals with scheduled integer frames.
+
+    A 1-frame excess is not silently forgiven by a broad 35-ms window.
+    For each anomaly we distinguish whether a drop was recorded *somewhere*
+    in that trial, but do not infer which interval it affected.
+    """
+    if not output.has(start_col, stop_col):
+        return "UNDETERMINED", f"{label}: cannot find {start_col}/{stop_col}; check Builder component names."
+    hz = _rounded_hz(output)
+    if hz is None:
+        return "UNDETERMINED", f"{label}: no unique positive whole-number frameRate for frame-count comparison."
+    if not rows:
+        return "UNDETERMINED", f"{label}: no relevant rows."
+
+    cadence = _estimated_cadence(output, hz)
+    errors = []
+    for i, row in enumerate(rows, 1):
+        start, stop = num(output, row, start_col), num(output, row, stop_col)
+        if start is None or stop is None or stop <= start:
+            errors.append(f"row {i}: missing/nonpositive software timestamps")
             continue
-        tested += 1
-        if abs((target - prime) * 1000 - soa) > 35:
-            errors.append(f"trial {i}: measured {(target-prime)*1000:.1f} ms, specified {soa:g} ms")
-    timing = ("FAIL", f"SOA mismatch: {errors[:3]} ({len(errors)} problem(s)).") if errors else ("PASS", f"All {tested} observed prime-to-target intervals within 35 ms of specified SOA.")
-    extra = []
-    for stim, expected_ms, candidates in (
+        specified = expected_ms if expected_ms is not None else num(output, row, "soa")
+        if specified is None:
+            errors.append(f"row {i}: missing expected duration")
+            continue
+        expected_frames = round(float(specified) * hz / 1000)
+        measured_ms = (stop - start) * 1000
+        measured_frames = round((stop - start) / cadence)
+        # Allow modest PsychoPy timestamp jitter (< 3/4 frame) rather than
+        # classifying borderline 9-ms refresh estimates as a whole missed
+        # physical frame. One full 16.7-ms period still fails.
+        expected_seconds = expected_frames * cadence
+        if abs((stop - start) - expected_seconds) > 0.75 * cadence:
+            # A missed frame is an observed delivery deviation even if caused by
+            # the machine rather than an erroneous Builder frame specification.
+            context = _drop_context(output, row, inside_trial)
+            errors.append(
+                f"row {i}: measured {measured_frames} vs expected {expected_frames} "
+                f"frame-equivalents ({measured_ms:.1f} ms, {context})"
+            )
+
+    if errors:
+        return (
+            "FAIL",
+            f"{label}: {len(errors)}/{len(rows)} software frame-equivalent deviations; "
+            f"first {errors[:4]}. A drop flag explains risk but does not prove the affected event."
+        )
+    return (
+        "PASS",
+        f"{label}: all {len(rows)} events match scheduled integer frame equivalents "
+        f"using measured cadence ~{cadence*1000:.3f} ms, scheduled rate {hz} Hz "
+        f"(software timestamp inference, not photodiode timing)."
+    )
+
+
+def _first_pair(output: Output, candidates: tuple[str, ...]) -> str | None:
+    return next((n for n in candidates if output.has(f"{n}.started", f"{n}.stopped")), None)
+
+
+def check_q4(output: Output, lists_dir: str) -> list[tuple[str, str]]:
+    """Frame-equivalent checks preserve drop-associated vs systematic failures."""
+    results = [_frame_duration_check(
+        output, "prime->target SOA", output.trials, "prime_onset", "target_onset",
+        expected_ms=None, inside_trial=True,
+    )]
+    for label, duration, names in (
         ("fixation", 500, ("fixation", "fixation_text", "fixText")),
         ("prime", 150, ("primeStim", "prime_text", "primeText", "prime_stim")),
     ):
-        matched = next((name for name in candidates if output.has(f"{name}.started", f"{name}.stopped")), None)
-        start, stop = (f"{matched}.started", f"{matched}.stopped") if matched else ("", "")
-        if matched:
-            bad = []
-            for i, row in enumerate(output.trials, 1):
-                onset, offset = num(output, row, start), num(output, row, stop)
-                if onset is None or offset is None or abs((offset-onset)*1000 - expected_ms) > 35:
-                    bad.append((i, None if onset is None or offset is None else round((offset-onset)*1000, 1)))
-            extra.append(("FAIL", f"{stim}: {len(bad)} durations inconsistent with {expected_ms} ms; first={bad[:3]}.") if bad
-                         else ("PASS", f"{stim}: all {len(output.trials)} recorded start/stop intervals within 35 ms of {expected_ms} ms."))
-        else:
-            extra.append(("UNDETERMINED", f"Cannot independently test {stim} duration: no recognized start/stop component pair. Need the Builder component names/flip logs."))
-    return [timing, *extra, ("UNDETERMINED", "On-screen appearance, actual blank gap and physical target cut-off need direct observation and/or photodiode; software flip timing alone is insufficient.")]
+        name = _first_pair(output, names)
+        results.append(_frame_duration_check(
+            output, label, output.trials,
+            f"{name}.started" if name else "<unknown>.started",
+            f"{name}.stopped" if name else "<unknown>.stopped",
+            expected_ms=duration, inside_trial=True,
+        ))
+    results.append((
+        "UNDETERMINED",
+        "Software timestamps cannot establish physical light onset, actual blank-gap "
+        "visibility, or target cutoff; inspect Builder and/or use hardware timing."
+    ))
+    return results
 
 
 def check_q5(output: Output, lists_dir: str) -> list[tuple[str, str]]:
-    """Check whether recorded frameRate is rounded; visibility on true frames remains a Pilot check."""
-    if not output.has("frameRate"):
-        return [("UNDETERMINED", "frameRate absent from CSV; examine PsychoPy's startup measurement and Builder frame settings.")]
-    raw = {output.get(row,"frameRate") for row in output.trials if output.get(row,"frameRate")}
-    if len(raw) != 1:
-        return [("FAIL", f"Expected a single measured rounded frameRate, found {sorted(raw)}.")]
-    try:
-        val = float(next(iter(raw)))
-    except ValueError:
-        return [("FAIL", f"Non-numeric frameRate: {raw}.")]
-    check = ("PASS", f"Recorded frameRate={val:g} whole Hz.") if val > 0 and val.is_integer() else ("FAIL", f"frameRate={val:g} is not a positive whole number.")
-    return [check, ("UNDETERMINED", "Whether ALL durations were controlled by whole frames, rather than seconds, cannot be proved from the saved rate alone; inspect Builder/generated script.")]
+    """Test whole-Hz metadata and ALL output-observable fixed durations."""
+    hz = _rounded_hz(output)
+    raw = {output.get(row, "frameRate") for row in output.trials if output.get(row, "frameRate")}
+    if hz is None:
+        return [("FAIL" if raw else "UNDETERMINED",
+                 f"No single positive rounded integer frameRate: {sorted(raw)}")]
+    results = [("PASS", f"Recorded refresh rate is a positive rounded integer: {hz} Hz.")]
+
+    for label, expected_ms, options, rows, in_trial in (
+        ("inter-trial interval", 500, ("blankText", "blank", "itiText", "iti_text"), output.trials, False),
+        ("practice feedback", 1000, ("feedbackText", "feedback_text", "feedbackTextStim"),
+         [row for row in output.trials if output.get(row, "phase") == "practice"], False),
+        ("end screen", 2000, ("endText", "end_text", "endTextStim"), output.extras, False),
+    ):
+        name = _first_pair(output, options)
+        if name:
+            matching_rows = [r for r in rows if output.get(r, f"{name}.started") or output.get(r, f"{name}.stopped")]
+            results.append(_frame_duration_check(
+                output, label, matching_rows, f"{name}.started", f"{name}.stopped",
+                expected_ms=expected_ms, inside_trial=in_trial,
+            ))
+        else:
+            results.append(("UNDETERMINED", f"{label}: no recognized component start/stop pair."))
+
+    # Maximum target duration applies only to timeout rows. Earlier responses
+    # terminate the routine and should not be treated as duration violations.
+    name = _first_pair(output, ("targetStim", "target_text", "targetText", "target_stim"))
+    timeout_rows = [r for r in output.trials if output.get(r, "timeout") in ("1", "1.0")]
+    if timeout_rows:
+        if name:
+            results.append(_frame_duration_check(
+                output, "target timeout window", timeout_rows,
+                f"{name}.started", f"{name}.stopped", 2000, True,
+            ))
+        else:
+            results.append(("UNDETERMINED", "target timeout window: no recognizable offset columns."))
+    results.append(("UNDETERMINED",
+        "CSV frame equivalents cannot prove that Builder specified every duration "
+        "in frames or that the display emitted photons at those times."
+    ))
+    return results
 
 
 def check_q6(output: Output, lists_dir: str) -> list[tuple[str, str]]:
@@ -471,6 +620,43 @@ def frame_audit(output: Output) -> list[tuple[str, str, str]]:
     return [("I1", i1_state, i1_msg), ("I2", i2_state, i2_msg)]
 
 
+def builder_evidence(output: Output, script: str | Path) -> list[tuple[str, str, str]]:
+    """Optional direct Builder-code evidence; not inferred from a CSV.
+
+    PILOT is only used when the supplied compiled experiment actually
+    demonstrates the programmed behavior. Without this option, the checker
+    cannot assert access to a build and leaves those portions UNDETERMINED.
+    """
+    source = Path(script)
+    try:
+        code = source.read_text(encoding="utf-8-sig")
+    except (OSError, UnicodeError) as exc:
+        return [("BUILD", "UNDETERMINED", f"Cannot inspect Builder script {source}: {exc}")]
+    if not output.has("primeStim.started", "targetStim.started", "trialKey.started"):
+        return [("BUILD", "UNDETERMINED", "This output does not use the provided own-build component family; do not apply unrelated Builder evidence.")]
+    tests = (
+        ("Q3", ("practiceLoop", "practiceFeedback", "breakScreen", "mainLoop", "endScreen"),
+         "Generated Builder script establishes the programmed instructions/practice/feedback/break/main/end sequence; visible behavior was piloted separately."),
+        ("Q5", ("fixFrames", "primeFrames", "soaFrames", "itiFrames", "feedbackFrames", "endFrames", "frameN >="),
+         "Builder script schedules fixed events by integer frame numbers; physical presentation still requires separate evidence."),
+        ("Q6", ("keyList=['f', 'j']", 'keyList=["escape"]'),
+         "Builder code limits trial keys to F/J and checks Escape independently; the CSV cannot test every irrelevant key."),
+        ("Q7", ("win.callOnFlip(trialKey.clock.reset)", "win.callOnFlip(trialKey.clearEvents"),
+         "Builder code resets and clears the response device on the target flip."),
+        ("Q8", ("str(primeStim.text)", "str(targetStim.text)"),
+         "Shown stimulus strings are read from the live PsychoPy TextStim objects in the compiled Builder code."),
+        ("Q9", ("primeStim.tStartRefresh", "targetStim.tStartRefresh"),
+         "Custom onset values come from visual-object refresh timestamps, not arbitrary condition-string times."),
+    )
+    outcomes = []
+    for q, markers, summary in tests:
+        if all(marker in code for marker in markers):
+            outcomes.append((q, "PILOT", summary))
+        else:
+            outcomes.append((q, "UNDETERMINED", "The supplied Builder script did not establish all required source-code features; inspect manually."))
+    return outcomes
+
+
 CHECKS = [check_q1, check_q2, check_q3, check_q4, check_q5,
           check_q6, check_q7, check_q8, check_q9, check_q10]
 
@@ -479,6 +665,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("files", nargs="+", help="CSV files")
     ap.add_argument("--lists", default="trial_lists", help="Folder of participant trial lists")
+    ap.add_argument("--builder", default=None, help="Optional own-build compiled ldt.py for independent code inspection and PILOT verdicts")
     args = ap.parse_args()
     # PowerShell often passes wildcards literally to Python. Expand here so
     # the same command works on Windows and shells that expand *.csv for us.
@@ -515,6 +702,9 @@ def main() -> int:
                 print(f"{check.__name__[6:].upper():4s} FAIL         Checker could not complete: {type(exc).__name__}: {exc}")
         for label, verdict, evidence in frame_audit(output):
             print(f"{label:4s} {verdict:12s} {evidence}")
+        if args.builder:
+            for label, verdict, evidence in builder_evidence(output, args.builder):
+                print(f"{label:4s} {verdict:12s} BUILDER EVIDENCE: {evidence}")
     return 0
 
 
